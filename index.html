@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="icon" href="./images/bookmark.png" /> 
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Righteous&display=swap" rel="stylesheet"> 
+     <link rel="stylesheet" href="css/all.min.css"> 
+     <link rel="stylesheet" href="css/bootstrap.min.css"> 
+     <link rel="stylesheet" href="css/style.css"> 
+     <title>Bookmark</title> 
+ </head> 
+ <body> 
+  
+     <div class="container"> 
+         <div class="heading mt-5 pb-4 "> 
+             <h1 class=" m-auto position-relative ">Bookmarker</h1> 
+         </div> 
+         <div class="title"> 
+             <p class="text-center mt-4 fs-4"> <i class="fa-solid fa-bookmark"></i> 
+                 Bookmark your favorite sites 
+                 <i class="fa-solid fa-bookmark"></i> 
+             </p> 
+         </div> 
+         <div class="inputs mt-5"> 
+             <div class="inputbox w-100"> 
+                 <input  id="name" class="" required="required" type="text"> 
+                 <span> 
+                      <i class="fa-solid fa-floppy-disk"></i> Site Name 
+                     </span> 
+                 <i class="c"></i> 
+             </div> 
+             <div class="inputbox w-100 mt-5"> 
+                 <input id="link" class="" required="required" type="text"> 
+                 <span> 
+                     <i class="fa-solid fa-link"></i> Site URL 
+                     </span> 
+                 <i class="c"></i> 
+             </div> 
+         </div> 
+        <div class="submit pb-4"> 
+          <button onclick=" addSite()" id="submit" class="button1 type1 mt-5 "> 
+              <span class="btn-txt">Submit</span> 
+            </button> 
+        </div> 
+  
+        <table class="table mt-4 text-center bg-light"> 
+         <thead> 
+           <tr><th class="text-capitalize">index</th> 
+           <th class="text-capitalize">Website Name</th> 
+           <th class="text-capitalize">Visit</th> 
+           <th class="text-capitalize">Delete</th> 
+         </tr> 
+     </thead> 
+         <tbody id="tableContent"> 
+             <!-- <tr> 
+                 <td>Google</td> 
+                 <td>Google</td> 
+                 <td> 
+                     <a href="www.google.com"> 
+                         <div class="button" data-tooltip="Size: 20Mb"> 
+                             <div class="button-wrapper"> 
+                               <div class="text">Visit</div> 
+                                 <span class="icon"> 
+                                     <i class="fa-solid fa-eye"></i> 
+                                 </span> 
+                               </div> 
+                             </div> 
+                     </a> 
+                 </td> 
+                 <td> 
+                         <div class="button delete" data-tooltip="Size: 20Mb"> 
+                             <div class="button-wrapper"> 
+                               <div class="text">Delete</div> 
+                                 <span class="icon"> 
+                                     <i class="fa-solid fa-trash"></i> 
+                                 </span> 
+                               </div> 
+                             </div> 
+                 </td> 
+             </tr> --> 
+         </tbody> 
+       </table> 
+  
+     </div> 
+  
+  
+  
+  
+     <script src="js/main.js" ></script> 
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+     <script src="js/bootstrap.bundle.min.js" ></script> 
+ </body> 
+ </html>

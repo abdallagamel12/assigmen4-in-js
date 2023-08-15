@@ -1,0 +1,230 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+body{ 
+    background-color: #F7ECDE; 
+    font-family: 'Righteous', cursive; 
+} 
+ 
+.heading { 
+    font-family: 'Pacifico', cursive; 
+    border-bottom: .125rem dotted #000; 
+} 
+ 
+.heading h1 { 
+    font-size: 48px; 
+    width: fit-content; 
+} 
+.heading h1::after { 
+    content: ""; 
+    width: 100%; 
+    height: 25%; 
+    background-color: #FEC260; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: -1; 
+    transition: all 0.3s; 
+} 
+ 
+.heading h1:hover::after{ 
+    height:70%; 
+ 
+} 
+ 
+.title  { 
+    color: #B3AC49; 
+} 
+/* ? ...................................... */ 
+ 
+.inputbox { 
+    position: relative; 
+    width: 12.25rem; 
+  } 
+ 
+  .inputbox input { 
+    position: relative; 
+    width: 100%; 
+    height: 40px;
+    outline: none; 
+    box-shadow: none; 
+    border: none; 
+    color: #23242a; 
+    font-size: 1em; 
+    letter-spacing: 0.05em; 
+    transition: 0.5s; 
+    z-index: 10; 
+    
+  } 
+ 
+  .inputbox span { 
+    position: absolute; 
+    left: 0; 
+    bottom: 40px;
+    
+    font-size: 1em; 
+    color: #000000; 
+    letter-spacing: 00.05em; 
+    transition: 0.5s; 
+    pointer-events: none; 
+  } 
+ 
+  
+ 
+  .inputbox .c { 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: .125rem; 
+    background: #ffffff; 
+    border-radius: .25rem; 
+    transition: 0.5s; 
+    pointer-events: none; 
+    z-index: 9; 
+  } 
+ 
+  
+/* ?........ */ 
+ 
+.submit { 
+    border-bottom: .125rem dotted #000; 
+} 
+  .button1 { 
+    height: 2.5rem; 
+    width: 9.375rem; 
+    position: relative; 
+    background-color: transparent; 
+    cursor: pointer; 
+    border: .125rem solid #252525; 
+    overflow: hidden; 
+    border-radius: 1.875rem; 
+    color: #333; 
+    transition: all 0.7s ease-in-out; 
+    left: 50%; 
+    transform: translate(-50%); 
+ 
+  } 
+ 
+  .btn-txt { 
+    z-index: 1; 
+    font-weight: 800; 
+    letter-spacing: .25rem; 
+  } 
+ 
+  .type1::after { 
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    transition: all 0.5s ease-in-out; 
+    background-color: #BB4120; 
+    border-radius: 1.875rem; 
+    visibility: hidden; 
+    height: .625rem; 
+    width: .625rem; 
+    z-index: -1; 
+  } 
+ 
+  .button1:hover { 
+    box-shadow: .0625rem .0625rem 12.5rem #252525; 
+    color: #fff; 
+    border: none; 
+  } 
+ 
+  .type1:hover::after { 
+    visibility: visible; 
+    transform: scale(100) translateX(.125rem); 
+  } 
+ 
+ 
+  /* ?.............. */ 
+ 
+  .button { 
+    --width: 6.25rem; 
+    --height: 2.1875rem; 
+    --tooltip-height: 2.1875rem; 
+    --tooltip-width: 5.625rem; 
+    --button-color: #8A9E23; 
+    width: var(--width); 
+    height: var(--height); 
+    background: var(--button-color); 
+    position: relative; 
+    text-align: center; 
+    border-radius: 0.45em; 
+    font-family: "Arial"; 
+    transition: background 0.3s; 
+    left: 50%; 
+    transform: translate(-50%); 
+    cursor: pointer; 
+  } 
+ 
+ 
+ 
+  .text { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  } 
+ 
+  .button-wrapper,.text,.icon { 
+    overflow: hidden; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    color: #fff; 
+  } 
+ 
+  .text { 
+    top: 0 
+  } 
+ 
+  .text,.icon { 
+    transition: top 0.5s; 
+  } 
+ 
+  .icon { 
+    color: #fff; 
+    top: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  } 
+ 
+ 
+ 
+  .button:hover { 
+    background: #8A9E23; 
+  } 
+ 
+  .button:hover .text { 
+    top: -100%; 
+  } 
+ 
+  .button:hover .icon { 
+    top: 0; 
+  } 
+ 
+  .button:hover:before,.button:hover:after { 
+    opacity: 1; 
+    visibility: visible; 
+  } 
+ 
+  .button:hover:after { 
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 1.25rem); 
+  } 
+ 
+  .button:hover:before { 
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button)); 
+  } 
+ 
+  .delete{ 
+    background-color: #D30820; 
+  } 
+ 
+  .button.delete:hover { 
+    background: #D30820; 
+  }
